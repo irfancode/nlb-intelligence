@@ -1,0 +1,45 @@
+# Environment
+.env
+*.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.venv/
+venv/
+
+# Datasets (large files downloaded from data.gov.sg)
+datasets/*.csv
+datasets/*.geojson
+datasets/*.kml
+datasets/*.zip
+!datasets/README.md
+
+# Output / generated files
+output/
+*.png
+*.html
+*.json
+!tests/fixtures/*.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Coverage
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml

@@ -20,8 +20,8 @@ class NLBApiError(Exception):
 class NLBClient:
     def __init__(self, app_id: str | None = None, api_key: str | None = None):
         settings = get_settings()
-        self._app_id = app_id or settings.nlb_app_id
-        self._api_key = api_key or settings.nlb_api_key
+        self._app_id = app_id if app_id is not None else settings.nlb_app_id
+        self._api_key = api_key if api_key is not None else settings.nlb_api_key
         if not self._app_id or not self._api_key:
             raise NLBApiError(
                 "NLB credentials required. Set NLB_APP_ID and NLB_API_KEY in .env "
